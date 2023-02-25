@@ -85,8 +85,8 @@ function animhouse(){
       ease: "none",
       scrollTrigger: {
         scrub: 0.5,
-        start:"top 10%",
-        markers:true,
+        start:"top 0%",
+         
         pin: "canvas",
         end: "500%",
       },
