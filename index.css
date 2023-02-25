@@ -25,11 +25,13 @@ html,body{
 
 #hackathon{
     scroll-behavior: smooth;
+    background-color: #E0EBED;
 }
 /* body {background-color:#1d233b} */
 .loader{
     position: absolute;
     z-index: 999999999999999999999999999;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: #000000;
@@ -52,7 +54,7 @@ html,body{
     padding: 1.5vw 5vw;
     width: 100%;
     min-height: 100vh;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 
@@ -324,7 +326,7 @@ cursor: pointer;
     padding: 3vw 10vw;
     width: 100%;
     min-height: 60vh;
-    background-color: #dadada;
+    /* background-color: #dadada; */
     display: flex;
     gap: 1vw;
 position: relative;
@@ -1406,6 +1408,7 @@ font-size: 1vw;
 
 #landing-page
 {
+     
     background-color: #E0EBED;
     /* background-color: black; */
     width: 100%;
@@ -1416,18 +1419,20 @@ font-size: 1vw;
  
  
   #pnavbar
-  {
-    position: relative;
+  { 
+      position: relative;
+      position: absolute;
+      z-index: 9999;
     padding: 0 10vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
    
-    height: 4vw;
+    height: 10vh;
     /* background-color: #0e1578; */
     border-bottom: 1px solid red;
-    /* background-color: green; */
+    background-color:#f6fafa;
   }
 
   
@@ -2018,7 +2023,7 @@ img{
     position: relative;
 width: 100vw;
 height: 70vh;
-background-color:#fff;
+/* background-color:#fff; */
  /* display: grid; */
  overflow: hidden;
  display: flex;
@@ -2074,9 +2079,26 @@ background-color:#fff;
 
 @media only screen and (max-width: 600px) {
     /* landing page starts here */
- 
 
-   
+    .patti>h1{
+        font-size: 8vw;
+        
+    }
+    .pnavbar-img{
+         width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       
+    }
+    #pnavbar{
+        display: flex;
+        justify-content: center;
+    }
+
+   #border-bottom{
+    display: none;
+   }
 
     #landing-page-main-section
     {
@@ -2108,41 +2130,18 @@ background-color:#fff;
         display: none;
     }
  
-/*  */
-#homehelper #ourservices h5
-{
-    font-size: 6vw;
-}
+ 
+ 
 
-#homehelper #ourservices 
-{
-  margin-bottom: 19vw;
-}
+ 
 
 
-#homehelper #ourservices h1
-{
-    font-size: 8vw;
-    padding-top: 2vw;
-}
+ 
 
-#homehelper #help-icons .help-icon 
-{
-   height: 29vh;
-   width: 50%;
-   
-}
+ 
 
-#homehelper #help-icons .help-icon .icon
-{
- padding: 3vw;
-   
-}
-#homehelper #help-icons .help-icon  h1 
-{
- font-size: 3.6vw;
-   
-}
+ 
+ 
 
     /* about page starts here */
 
@@ -2646,6 +2645,7 @@ background-color:#fff;
    
 
     #about-renter{
+        
         flex-direction: column ;
     }
     .about-renter-item-text>h1 {
@@ -2711,6 +2711,7 @@ background-color:#fff;
 
   .pnavbar-img>h3
 {
+    /* display: none; */
     font-weight: 400;
     font-size: 5vw;
     color: rgb(6, 5, 5);
@@ -2761,7 +2762,7 @@ background-color:#fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(232, 227, 227, 0.927);
+    /* background-color: rgba(232, 227, 227, 0.927); */
     padding: 2vw 1vw;
 }
 
@@ -2885,132 +2886,6 @@ background-color:#fff;
     color: #fff;
 }
 
-
-/* homefinder section */
-
-@media only screen and (max-width: 600px) {
-     
-    #homehelper #ourservices
-    {
-     height: fit-content;
-    }
-
-    #homehelper #ourservices h1
-    {
-        font-size: 8vw!important;
-        /* padding-top: 50vw!important; */
-    }
-
-    #homehelper #help-icons .help-icon
-    {
-        height: 29vh;
-        width: 50%!important;
-    }
-
-    #homehelper #help-icons .help-icon .icon
-    {
-        padding: 5vw!important;
-    }
-
-    #homehelper #help-icons .help-icon h1
-    {
-        font-size: 3.6vw!important;
-    }
-
-    
-  }
-#homehelper-main{
-
-    width: 100%;
-    height: fit-content;
-    /* min-height: 100vh; */
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#homehelper{
-
-    width: 100%;
-    height: fit-content;
-     
-}
-#homehelper  #ourservices{
-
-
-    width: 100%;
-    height: 15vh;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#homehelper  #ourservices h5{
-
-    font-size: 2vw;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-}
-
-#homehelper  #ourservices h1{
-
-    font-size: 4vw;
-    font-family: 'Open Sans', sans-serif;
-}
-#homehelper #help-icons{
-
-    width: 100%;
-    min-height: 45vh;
-    /* background-color: red; */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#homehelper #help-icons .help-icon{
-
-    width: 20%;
-    height: 40vh;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-cursor: pointer;
-    flex-direction: column;
-}
-#homehelper #help-icons .help-icon:hover{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
-}
-
-#homehelper #help-icons .help-icon .icon{
-
-/* background-color: aquamarine; */
-padding: 1vw;
-border-radius: 50%;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-
-#homehelper #help-icons .help-icon .icon i{
-    font-size: 4vw;
-}
-
-#homehelper #help-icons .help-icon .icon img{
-    height: 6vh;
-}
-
-#homehelper #help-icons .help-icon h1{
-    margin-top: 1vw;
-font-size: 1.5vw;
-}
-
-
-
 /* about renter */
 
 
@@ -3021,7 +2896,7 @@ font-size: 1.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(232, 227, 227, 0.434);
+    /* background-color: rgba(232, 227, 227, 0.434); */
     padding: 2vw 1vw;
 }
 
@@ -3154,17 +3029,7 @@ font-size: 1.5vw;
 }
 
 
-#pnavbar
-{
-    width: 100%;
-    /* height: 10vh; */
-    /* background-color: #006450; */
-    display: flex;
-    align-items: center;
-    /* padding: 1vw; */
-    height: 10vh;
-    justify-content: space-between;
-}
+ 
 
 .pnavbar-img
 {
@@ -3198,3 +3063,29 @@ font-size: 1.5vw;
    font-family: 'PT Sans', sans-serif;
 
 }
+
+canvas {
+    padding-top: -10vh;
+   width: 100vw;
+   height: 100vh;
+   border: none;
+    object-fit: cover;
+  }
+
+.patti{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    /* justify-content: space-between; */
+    background-color: #000000;
+    gap: 4vw;
+    color: #83f2dc;
+    overflow: hidden;
+    /* font-size: large; */
+}
+.patti>h1{
+    font-size: 3vmax;
+    font-family: bigilla;
+    animation: identifier infinite 10s linear;
+}
+ 
