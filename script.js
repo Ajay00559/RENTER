@@ -1,15 +1,31 @@
-//  function navanimation(){
-//           document.querySelectorAll('.pnavbar-links>a').forEach(function(e){
-//             console.log(e.target)
 
-//           })
-//  }
-//  navanimation()
-
-// document.images.ready.then(function(){
-//  loaderanimation()
+document.querySelector('body').style.overflow = "hidden";
+var bool=Boolean;
+    document.fonts.ready.then(function(){
+        bool=true;
+    }); 
+ if(bool){
     
-// });
+var imgs = document.images,
+len = imgs.length,
+counter = 0;
+
+[].forEach.call( imgs, function( img ) {
+if(img.complete)
+  incrementCounter();
+else
+  img.addEventListener( 'load', incrementCounter, false );
+} );
+
+function incrementCounter() {
+counter++;
+if ( counter === len ) {
+    document.querySelector('body').style.overflow = "initial"
+    loaderanimation();
+}
+}
+ }
+ 
 function menuToggle()
  {
     var border=document.querySelector('#border-bottom');
@@ -40,14 +56,14 @@ navlinks.forEach(function(elem){
             scale:10,
             display:"none",
             y:"-100%",
-            duration:2,
-            delay:1.5,
+            duration:1.5,
+             
             ease:Expo.easeInOut,
         })
         tlLoader.to('.loader',{
             opacity:0,
             height:"0%",
-            duration:2,
+            duration:1.5,
             delay:-1,
             ease:Expo.easeInOut,
             
@@ -56,8 +72,7 @@ navlinks.forEach(function(elem){
     
  }
 
-//  loaderanimation()
-loaderanimation()
+ 
 
 function animhouse(){
     const canvas = document.querySelector(".canvas");

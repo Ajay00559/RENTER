@@ -1,3 +1,14 @@
+@font-face{
+    src: url("./Bigilla.otf");
+    font-family: "Bigilla";
+    font-weight: 100;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+
+
+
 *
 {
     padding: 0;
@@ -1304,7 +1315,7 @@ font-size: 1vw;
    font-size: 5vw;
    /* font-family: 'PT Sans', sans-serif; */
 
-   font-family: Bigilla;
+   font-family: "Bigilla";
    font-weight: 800;
    color: #000000;
 }
@@ -1483,7 +1494,7 @@ font-size: 1vw;
 {
      
     padding-top: 3vw;
-    font-family: Bigilla;
+    font-family: "Bigilla";
     font-size: 5.5vw;
     color: #111;
 }
@@ -3086,7 +3097,7 @@ canvas {
 }
 .patti>h1{
     font-size: 3vmax;
-    font-family: bigilla;
+    font-family: "Bigilla";
     animation: identifier infinite 10s linear;
 }
  
