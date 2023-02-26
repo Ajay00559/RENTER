@@ -1698,7 +1698,7 @@ padding-top: 2vw;
     font-weight: 600;
     font-size: 1.2vw;
 
-    font-family: 'Jost', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 
 }
 .filter-2-item:nth-child(1)>h4
@@ -1716,7 +1716,7 @@ padding-top: 2vw;
     font-size: 1.2vw;
     color: #111111eb;
     font-weight: 600;
-    font-family: 'Jost', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 
 
 }
@@ -1729,7 +1729,7 @@ padding-top: 2vw;
     font-weight: 500;
     color: #a6a3a3;
    
-    font-family: 'Jost', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .filter-2-item:nth-child(2)
@@ -1763,14 +1763,15 @@ padding-top: 2vw;
     font-weight: 600;
     font-size: 1.2vw;
     color: rgb(53, 51, 51);
-    font-family: 'Jost', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .filter-2-item:nth-child(3)>h6
 {
     font-size: 1vw;
     color: #a6a3a3;
-    font-family: 'Jost', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+ 
 }
 
 .filter-2-item:nth-child(4)
@@ -2822,7 +2823,7 @@ height: 70vh;
 
 {
   font-size: 1.3vw;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
  font-weight: 500;
  padding: 1vw;
 }
@@ -3036,7 +3037,7 @@ height: 70vh;
     width: 4vw;
     
     height: 4vw;
-    font-family: 'Courier New', Courier, monospace;
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
