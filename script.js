@@ -1,30 +1,32 @@
-
-document.querySelector('body').style.overflow = "hidden";
-var bool=Boolean;
-    document.fonts.ready.then(function(){
-        bool=true;
-    }); 
- if(bool){
-    
-var imgs = document.images,
-len = imgs.length,
-counter = 0;
-
-[].forEach.call( imgs, function( img ) {
-if(img.complete)
-  incrementCounter();
-else
-  img.addEventListener( 'load', incrementCounter, false );
-} );
-
-function incrementCounter() {
-counter++;
-if ( counter === len ) {
-    document.querySelector('body').style.overflow = "initial"
-    loaderanimation();
-}
-}
- }
+const images = [];
+ 
+  
+  // create a variable to keep track of the number of images that have finished loading
+  let loadedImages = 0;
+  
+  // loop through each image URL and create an Image element to load it
+  images.forEach(imageUrl => {
+    const image = new Image();
+    image.src = imageUrl;
+    image.onload = imageLoaded;
+  });
+  
+  // define a function to run each time an image finishes loading
+  function imageLoaded() {
+    loadedImages++;
+    if (loadedImages === images.length) {
+      // all images have finished loading, so hide the loader
+      const loader = document.querySelector(".loader");
+      loader.style.display = "none";
+    }
+  }
+  
+  
+  
+  
+  
+  
+ 
  
 function menuToggle()
  {
@@ -71,7 +73,7 @@ navlinks.forEach(function(elem){
         })
     
  }
-
+loaderanimation()
  
 
 function animhouse(){
@@ -82,9 +84,9 @@ function animhouse(){
     const context = canvas.getContext("2d");
     const frameCount = 195;
     
-    const currentFrame = (index) => `./3dhousepngimages/${(index + 1).toString()}.png`;
+    const currentFrame = (index) => `https://ik.imagekit.io/f9qb4i2fv/3dhouse/${(index + 1).toString()}.png`;
     
-    const images = [];
+     
     let house = { frame: 0 };
     
     for (let i = 0; i < frameCount; i++) {
@@ -99,11 +101,11 @@ function animhouse(){
       snap: "frame",
       ease: "none",
       scrollTrigger: {
-        scrub: 0.5,
+        scrub: 1,
         start:"top 0%",
          
         pin: "canvas",
-        end: "500%",
+        // end: "500%",
       },
       onUpdate: render,
     });
